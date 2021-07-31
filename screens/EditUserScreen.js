@@ -57,7 +57,7 @@ const EditUserScreen = props => {
                 setUserName(e);                
             }
           }
-            defaultValue={userName}
+           
             required
             />
           <Text>Age</Text>
@@ -84,9 +84,9 @@ const EditUserScreen = props => {
           
             style={styles.input}
             errorText="Please enter a valid address!"
-            keyboardType="number"
+            keyboardType="default"
             returnKeyType="next"
-            maxLength={30}
+            
             onChangeText={
               (e) => {
                 setAddress(e);                
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
   form: {
     margin: 20,
     flex: 1,
-    alignItems: 'center',
+    // alignItems: 'center',
     marginTop: 40,
     justifyContent: 'center',
   },
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
   input: {
 
     backgroundColor: "#e0e0e0",
-    textAlign: 'center',    
+    // textAlign: 'center',    
     paddingHorizontal: 5,
     marginTop: 10,
     marginBottom: 20,

@@ -95,7 +95,8 @@ const HomeScreen = props => {
       
         <FlatList 
         data={users}
-        numColumns={3}
+        // numColumns={3}
+        horizontal
         renderItem={itemData => (
            <Users
            userName={itemData.item.userName}

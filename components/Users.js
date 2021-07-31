@@ -22,9 +22,9 @@ const Users = props => {
   return (
     
    
-        
+       
         <TouchableCmp onPress={props.onSelect} useForeground>
-           <View style={styles.circle}>
+           <View style={styles.card}>
             <View style={styles.details}>
               <Text style={styles.text}>{props.userName}</Text>
               <Text style={styles.text}>{props.age}</Text>
@@ -39,6 +39,24 @@ const Users = props => {
 };
 
 const styles = StyleSheet.create({
+  card: {
+    // margin: 20,
+    backgroundColor: 'white',
+    borderRadius: 20,
+    padding: 5,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+    height: diameter,
+    margin: 5,
+    width: diameter,
+  },
   circle: {
     height: diameter,
     margin: 5,
