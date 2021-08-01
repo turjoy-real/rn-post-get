@@ -91,11 +91,8 @@ const HomeScreen = props => {
   return (
     
     <SafeAreaView style={styles.container}>
-      
-      
         <FlatList 
         data={users}
-        // numColumns={3}
         horizontal
         renderItem={itemData => (
            <Users

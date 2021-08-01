@@ -10,10 +10,12 @@ export const fetchUsers = () => {
     return async (dispatch) => {
         try {
             const response = await axios.get(
-                'https://test-11348-default-rtdb.firebaseio.com/users.json',
+                // 'https://test-11348-default-rtdb.firebaseio.com/users.json',
+                'https://my-json-server.typicode.com/turjoy-real/data/users'
               );
 
             const resData = await response.data;
+            // console.log(resData);
             
             const loadedUsers = [];
 
@@ -41,7 +43,9 @@ export const fetchUsers = () => {
 
 export const createUser = (userName, age, address, activity) => {
     return async (dispatch) => {
-        const response = await axios.post(`https://test-11348-default-rtdb.firebaseio.com/users.json`, 
+        const response = await axios.post(
+            // 'https://test-11348-default-rtdb.firebaseio.com/users.json', 
+            'https://my-json-server.typicode.com/turjoy-real/data/users',
         {
             userName : userName,
             age: age,
@@ -49,15 +53,18 @@ export const createUser = (userName, age, address, activity) => {
             activity: activity
         });
 
-        if (!response.request._sent) {
-            throw new Error('Something went wrong!');
-          };
+        console.log(response.data.id);
+
+        // if (!response.request._sent) {
+        //     throw new Error('Something went wrong!');
+        //   };
 
           
 
         dispatch({
             type: CREATE_USER,
-            eid: response.data.name ,
+            // eid: response.data.name ,
+            eid: response.data.id,
             userData: {
              userName,
              age, 
