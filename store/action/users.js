@@ -10,7 +10,8 @@ export const fetchUsers = () => {
     return async (dispatch) => {
         try {
             const response = await axios.get(
-                // 'https://test-11348-default-rtdb.firebaseio.com/users.json',
+               
+                
                 'https://my-json-server.typicode.com/turjoy-real/data/users'
               );
 
@@ -44,7 +45,7 @@ export const fetchUsers = () => {
 export const createUser = (userName, age, address, activity) => {
     return async (dispatch) => {
         const response = await axios.post(
-            // 'https://test-11348-default-rtdb.firebaseio.com/users.json', 
+           
             'https://my-json-server.typicode.com/turjoy-real/data/users',
         {
             userName : userName,
